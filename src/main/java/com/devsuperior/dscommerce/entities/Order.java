@@ -40,7 +40,13 @@ public class Order {
         return id;
     }
 
+    public Payment getPayment() {
+        return payment;
+    }
 
+    public User getClient() {
+        return client;
+    }
 
     public Instant getMoment() {
         return moment;

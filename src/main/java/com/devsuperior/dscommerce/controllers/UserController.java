@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     private UserService service;
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_CLIENT')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_OPERATOR')")
     @GetMapping(value = "/me")
     public ResponseEntity<UserDTO> findMe(){
         return ResponseEntity.ok(service.getMe());

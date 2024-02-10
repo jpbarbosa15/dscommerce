@@ -64,6 +64,18 @@ public class Order {
         return items.stream().map(x -> x.getProduct()).toList();
     }
 
+    public void setMoment(Instant moment) {
+        this.moment = moment;
+    }
+
+    public void setStatus(OrderStatus status) {
+        this.status = status;
+    }
+
+    public void setClient(User client) {
+        this.client = client;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

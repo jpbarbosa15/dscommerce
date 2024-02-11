@@ -12,7 +12,7 @@ import java.util.*;
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String name;
     @Column(unique = true)
     private String email;
@@ -45,7 +45,7 @@ public class User implements UserDetails {
         this.password = password;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -85,6 +85,14 @@ public class User implements UserDetails {
         roles.add(role);
     }
 
+    public boolean hasRole(String roleName){
+        for(Role role : roles){
+            if(role.getAuthority().equals(roleName)){
+                return true;
+            }
+        }
+        return false;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -128,7 +136,7 @@ public class User implements UserDetails {
 
         User user = (User) o;
 
-        return id == user.id;
+        return id.equals(user.id);
     }
 
     @Override

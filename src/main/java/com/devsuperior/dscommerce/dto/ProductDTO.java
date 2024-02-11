@@ -19,6 +19,7 @@ public class ProductDTO {
     @Size(min = 10,message = "O descrição precisa ter no minimo 10 caracteres")
     private String description;
     @Positive(message = "O preço precisa ser positivo")
+    @NotNull(message = "Preço requerido")
     private double price;
     private String imgUrl;
     @NotEmpty(message = "Deve ter pelo meno 1 categoria")

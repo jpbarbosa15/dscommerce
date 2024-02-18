@@ -28,3 +28,4 @@ As funcionalidades do sistema incluem:
 - Spring security
 - JWT
 
+# [License](https://github.com/jpbarbosa15/dscommerce/blob/master/LICENSE)

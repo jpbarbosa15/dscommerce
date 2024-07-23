@@ -2,6 +2,9 @@
 Dscommerce é um sistema de comêrcio eletrônico construido durante o curso de Java Spring Profissional do Devsuperior.
 
 As funcionalidades do sistema incluem:
+asdasdasd
+assdasdasd
+
 
 - Cadastro e validação de usuario
   - Usuários não identificados podem se cadastrar no sistema ou navegar no catálogo de produtos
